@@ -24,9 +24,3 @@ def reformat_wordsegment_output(input_file_path, output_file_path):
     return output_file_path
 
 # Example usage
-
-
-
-
-# Example usage
-# reformat_wordsegment_output('./output/pre_output.txt', 'output.txt')

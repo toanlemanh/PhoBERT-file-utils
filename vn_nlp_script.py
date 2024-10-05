@@ -1,7 +1,6 @@
 import torch
 from transformers import AutoModel, AutoTokenizer
 from transformers import logging
-import os
 import re
 logging.set_verbosity_warning()
 from vn_wordsegment_script import vn_nlp
@@ -11,7 +10,7 @@ tokenizer = AutoTokenizer.from_pretrained("vinai/phobert-base-v2")
 
 # INPUT TEXT MUST BE ALREADY WORD-SEGMENTED!
 # Handle word-sengment taskd for Vn
-wordsegemnt_file = vn_nlp()
+wordsegment_file = vn_nlp()
 
 def encode_sentences_from_file(input_file_path, tokenizer):
     with open(input_file_path, 'r', encoding='utf-8') as infile:
@@ -28,7 +27,7 @@ def encode_sentences_from_file(input_file_path, tokenizer):
                 features = phobert(encoded_tensor)  # Models outputs are now tuples
                 print(features)
     #         encoded_sentences.append(encoded_tensor)  # Store the tensor in the list
-encode_sentences_from_file(input_file_path = wordsegemnt_file, tokenizer = tokenizer)   
+encode_sentences_from_file(input_file_path = wordsegment_file, tokenizer = tokenizer)   
 
 
 ## With TensorFlow 2.0+:
