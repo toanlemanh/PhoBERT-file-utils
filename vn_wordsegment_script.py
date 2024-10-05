@@ -25,4 +25,3 @@ def vn_nlp():
 
     # Reformat the content in file and generate a final file
     return process_wordsegment(input_file_path=output_file, output_file_path= wordsegment_file)
-vn_nlp()

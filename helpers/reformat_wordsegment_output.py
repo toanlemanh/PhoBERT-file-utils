@@ -23,4 +23,3 @@ def reformat_wordsegment_output(input_file_path, output_file_path):
         outfile.write(' '.join(output_lines))  # Join sentences with space instead of newline
     return output_file_path
 
-# Example usage
